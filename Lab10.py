@@ -28,5 +28,13 @@ def check_phrase(user_phrase , morse):
                     cleaned += l
             test = False    # to pause the loop
             return cleaned 
-                
 cleaned = check_phrase(user_phrase,morse_code)
+
+# Function to translate the input into a list of morse 
+def translate (cleaned,morse_code):
+        morse_list = []
+        for i in cleaned:
+            morse_list.append(morse_code[i])
+        return morse_list
+        
+translate(cleaned,morse_code)
