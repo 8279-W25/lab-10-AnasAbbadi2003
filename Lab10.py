@@ -8,7 +8,7 @@ morse_code = {
     'Z': '--..',
     '0': '-----', '1': '.----', '2': '..---', '3': '...--', 
     '4': '....-', '5': '.....', '6': '-....', '7': '--...', 
-    '8': '---..', '9': '----.', ' ':'/'
+    '8': '---..', '9': '----.', ' ':'//'
 }
 # The user Input
 user_phrase = input("Enter your phrase : ")
@@ -36,5 +36,5 @@ def translate (cleaned,morse_code):
         for i in cleaned:
             morse_list.append(morse_code[i])
         return morse_list
-        
+
 translate(cleaned,morse_code)
