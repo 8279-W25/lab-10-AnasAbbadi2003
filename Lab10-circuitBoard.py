@@ -86,18 +86,18 @@ def morse_light(entered_time, morse_list):
             cp.pixels.fill((0, 0, 0))  # Turn off LEDs
             time.sleep(entered_time * 7)  # 7-unit space
         else:
-            for letter in morse:  # Process each dot or dash
+            for letter in morse:  
                 if letter == '.':
                     cp.pixels.fill(color)  # Turn on LEDs
-                    cp.play_tone(tone_freq, entered_time)  # Play tone for 1 unit
+                    cp.play_tone(tone_freq, entered_time)  # Play tone 
                     cp.pixels.fill((0, 0, 0))  # Turn off LEDs
                     time.sleep(entered_time)  # Off for 1 unit
                 elif letter == '-':
-                    cp.pixels.fill(color)  # Turn on LEDs
-                    cp.play_tone(tone_freq, entered_time * 3)  # Play tone for 3 units
-                    cp.pixels.fill((0, 0, 0))  # Turn off LEDs
+                    cp.pixels.fill(color)  
+                    cp.play_tone(tone_freq, entered_time * 3)  
+                    cp.pixels.fill((0, 0, 0))  
                     time.sleep(entered_time)  # Off for 1 unit
-            time.sleep(entered_time * 2)  # Additional 2 units (total 3 between letters)
+            time.sleep(entered_time * 2)  # 2 units because we already have another 1 unit before
 
 # Run the Morse code display
 morse_light(entered_time, morse_list)
